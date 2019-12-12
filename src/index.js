@@ -7,12 +7,13 @@ import 'semantic-ui-css/semantic.min.css';
 import {createStore} from "redux";
 import {Provider} from "react-redux";
 import reducers from "./reducers";
+import {Button} from "semantic-ui-react";
 
 const store = createStore(reducers);
 
 ReactDOM.render(
     <Provider store={store}>
-        <App />
+        <App/>
     </Provider>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
