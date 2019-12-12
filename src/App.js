@@ -1,6 +1,6 @@
-import React, {useReducer, useState} from 'react';
+import React from 'react';
 import NavBar from "./components/NavBar";
-import {Container, Segment} from "semantic-ui-react";
+import {Container} from "semantic-ui-react";
 import Calender from "./components/Calender";
 
 function App() {

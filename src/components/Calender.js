@@ -1,7 +1,8 @@
 import React, {useState} from "react";
-import {Button, Grid, Icon, Segment} from "semantic-ui-react";
+import {Grid, Message, Segment} from "semantic-ui-react";
 import Dropdown from "semantic-ui-react/dist/commonjs/modules/Dropdown";
 import WeekTable, {getWeekDay} from "./WeekTable";
+import ResponsiveButtons from "./ResponsiveButtons";
 
 const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     .map((day, index) => ({
@@ -10,17 +11,15 @@ const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Frida
         value: day
     }));
 
-const reducer = (state, action) => {
-    if (action.type === "SET_DATE") {
-        return action.payload
-    }
-
-    return state
-};
-
 const initialDate = new Date();
 
-const getDate = (date, weekDay) => {
+/**
+ * Retrieves the closest date to the given weekday and returns it
+ * @params: {Date} [date]
+ * @params: {string} [weekDay]
+ * @return: Date
+ */
+const getClosestDate = (date, weekDay) => {
     let nextDate = new Date(date);
     let prevDate = new Date(date);
 
@@ -39,7 +38,7 @@ const getDate = (date, weekDay) => {
 
 const Calender = () => {
     const [firstDay, setFirstDay] = useState(weekDays[0].value);
-    const [date, setDate] = useState(getDate(initialDate, firstDay));
+    const [date, setDate] = useState(getClosestDate(initialDate, firstDay));
 
     const startDate = new Date(date);
     startDate.setDate(startDate.getDate() - 7);
@@ -56,32 +55,20 @@ const Calender = () => {
 
     const handleFirstDayChange = (value) => {
         setFirstDay(value);
-        setDate(getDate(date, value));
+        setDate(getClosestDate(date, value));
     };
-    
+
     return (
         <div>
-
             <Segment basic>
                 <Grid columns={3}>
-                    <Grid.Column>
-                        <Grid columns={"equal"} stackable>
-                            <Grid.Column textAlign={"left"}>
-                                <Button color={"red"} onClick={handlePreviousWeek} size={"small"}>
-                                    <Icon name={"arrow left"}/> Previous Week
-                                </Button>
-                            </Grid.Column>
-                            <Grid.Column textAlign={"left"}>
-                                <Button color={"blue"} onClick={handleNextWeek} size={"small"}>
-                                    Next Week <Icon name={"arrow right"}/>
-                                </Button>
-                            </Grid.Column>
-                        </Grid>
+                    <Grid.Column width={6}>
+                        <ResponsiveButtons handleNextWeek={handleNextWeek} handlePreviousWeek={handlePreviousWeek}/>
                     </Grid.Column>
-                    <Grid.Column textAlign={"center"}>
-                        <h2>{startDate.toLocaleDateString("et-EE")} - {date.toLocaleDateString("et-EE")}</h2>
+                    <Grid.Column textAlign={"center"} id={"week-range"} width={4}>
+                        <strong>{startDate.toLocaleDateString("et-EE")} - {date.toLocaleDateString("et-EE")}</strong>
                     </Grid.Column>
-                    <Grid.Column textAlign={"right"}>
+                    <Grid.Column textAlign={"right"} width={6}>
 
                         <Dropdown placeholder='First Day' search selection options={weekDays}
                                   style={{position: "absolute", right: 10}} defaultValue={firstDay}
@@ -91,6 +78,13 @@ const Calender = () => {
             </Segment>
 
             <WeekTable endDate={date} startDate={startDate}/>
+
+            <Message info compact>
+                <p>{"folk"}</p>
+            </Message>
+            <Message success compact>
+                <p>{"public"}</p>
+            </Message>
         </div>
     )
 

@@ -1,13 +1,13 @@
-import React, {useEffect, useState} from "react";
-import {Table, Menu, Icon, Message} from "semantic-ui-react";
-import axios from "axios";
-import {useDispatch, useStore} from "react-redux";
+import React from "react";
+import {Loader, Message, Table} from "semantic-ui-react";
 import _ from "lodash";
+import {useGetHolidays} from "../api";
 
 export const getWeekDay = (date) => {
     return new Intl.DateTimeFormat("ee-EE", {weekday: "long"}).format(date)
 };
 
+//Retrieves the dates in the current week
 const getDates = (startDate) => {
     const dates = [startDate];
     let nextDate = new Date(startDate);
@@ -16,9 +16,10 @@ const getDates = (startDate) => {
         dates.push(new Date(nextDate));
     }
 
-    return dates
+    return dates;
 };
 
+//Constructs the table headers
 const createTableHeader = (startDate) => {
     const dates = getDates(startDate);
 
@@ -34,6 +35,7 @@ const createTableHeader = (startDate) => {
 
 };
 
+//Constructs the table body cells
 const createTableBody = (startDate, holidays) => {
     const dates = getDates(startDate);
 
@@ -53,43 +55,17 @@ const createTableBody = (startDate, holidays) => {
     })
 };
 
-const useGetHolidays = (startDate, endDate) => {
-    const state = useStore().getState();
-    const [holidays, setHolidays] = useState(state && state.holidays);
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        const start = holidays && Object.keys(state.holidays)[0];
-        const end = holidays && Object.keys(state.holidays)[_.size(state.holidays) - 1];
-
-        if ((new Date(start) < startDate && new Date(end) < endDate)) {
-            axios.post("https://wozmx9dh26.execute-api.eu-west-1.amazonaws.com/api/holidays", {
-                apiKey: "887d33535711e966f7b5746f263b4b81",
-                startDate: startDate.toISOString().substring(0, 10),
-                endDate: endDate.toISOString().substring(0, 10)
-            }).then(r => {
-                dispatch({type: "GET_HOLIDAYS", payload: r.data.holidays});
-                setHolidays(r.data.holidays);
-            }).catch(e => console.log(e))
-        } else {
-            setHolidays(state.holidays);
-        }
-    }, [startDate, endDate]);
-
-    return holidays;
-};
-
 const WeekTable = ({startDate, endDate}) => {
     const holidays = useGetHolidays(startDate, endDate);
     const dateHeaders = createTableHeader(startDate);
 
-    if (!holidays) return null;
+    if (!holidays) return <Loader>Loading...</Loader>;
 
 
     const dateBody = createTableBody(startDate, holidays);
     return (
-        <div>
-            <Table celled columns={7}>
+        <div id={"table"}>
+            <Table celled columns={7} unstackable>
                 <Table.Header>
                     <Table.Row>
                         {dateHeaders}

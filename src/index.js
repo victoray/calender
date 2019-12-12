@@ -7,7 +7,6 @@ import 'semantic-ui-css/semantic.min.css';
 import {createStore} from "redux";
 import {Provider} from "react-redux";
 import reducers from "./reducers";
-import {Button} from "semantic-ui-react";
 
 const store = createStore(reducers);
 
