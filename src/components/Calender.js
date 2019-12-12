@@ -44,6 +44,9 @@ const Calender = () => {
     const startDate = new Date(date);
     startDate.setDate(startDate.getDate() - 7);
 
+    const endDate = new Date(date);
+    endDate.setDate(endDate.getDate() - 1);
+
     const handlePreviousWeek = () => {
         date.setDate(date.getDate() - 7);
         setDate(new Date(date));
@@ -67,7 +70,7 @@ const Calender = () => {
                         <ResponsiveButtons handleNextWeek={handleNextWeek} handlePreviousWeek={handlePreviousWeek}/>
                     </Grid.Column>
                     <Grid.Column textAlign={"center"} id={"week-range"} width={4}>
-                        <strong>{startDate.toLocaleDateString("et-EE")} - {date.toLocaleDateString("et-EE")}</strong>
+                        <strong>{startDate.toLocaleDateString("et-EE")} - {endDate.toLocaleDateString("et-EE")}</strong>
                     </Grid.Column>
                     <Grid.Column textAlign={"right"} width={6}>
 
