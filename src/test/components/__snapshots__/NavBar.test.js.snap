@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the <NavBar/> 1`] = `
+<NavBar>
+  <Menu
+    borderless={true}
+    className="navbar"
+    inverted={true}
+  >
+    <div
+      className="ui borderless inverted navbar menu"
+    >
+      <MenuItem>
+        <div
+          className="item"
+          onClick={[Function]}
+        >
+          <img
+            alt=""
+            src="https://react.semantic-ui.com/logo.png"
+          />
+        </div>
+      </MenuItem>
+      <MenuItem>
+        <div
+          className="item"
+          onClick={[Function]}
+        >
+          <Header
+            inverted={true}
+          >
+            <div
+              className="ui inverted header"
+            >
+              Calender
+              <sup>
+                TM
+              </sup>
+            </div>
+          </Header>
+        </div>
+      </MenuItem>
+    </div>
+  </Menu>
+</NavBar>
+`;

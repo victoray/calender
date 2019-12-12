@@ -4,6 +4,7 @@ import Dropdown from "semantic-ui-react/dist/commonjs/modules/Dropdown";
 import WeekTable, {getWeekDay} from "./WeekTable";
 import ResponsiveButtons from "./ResponsiveButtons";
 
+
 const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     .map((day, index) => ({
         key: index,
@@ -11,19 +12,18 @@ const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Frida
         value: day
     }));
 
-const initialDate = new Date();
-
 /**
  * Retrieves the closest date to the given weekday and returns it
  * @params: {Date} [date]
  * @params: {string} [weekDay]
  * @return: Date
  */
-const getClosestDate = (date, weekDay) => {
+export const getClosestDate = (date, weekDay) => {
     let nextDate = new Date(date);
     let prevDate = new Date(date);
 
-    while (true) {
+
+    for (let i = 0; i < 7; i++) {
         if (getWeekDay(nextDate) === weekDay) {
             return new Date(nextDate);
         }
@@ -35,10 +35,11 @@ const getClosestDate = (date, weekDay) => {
     }
 };
 
+const initialDate = getClosestDate(new Date(), weekDays[0].value);
 
 const Calender = () => {
     const [firstDay, setFirstDay] = useState(weekDays[0].value);
-    const [date, setDate] = useState(getClosestDate(initialDate, firstDay));
+    const [date, setDate] = useState(initialDate);
 
     const startDate = new Date(date);
     startDate.setDate(startDate.getDate() - 7);

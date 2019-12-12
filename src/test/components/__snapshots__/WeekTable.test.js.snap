@@ -1,0 +1,517 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render <WeekTable/> 1`] = `
+<WeekTable
+  holidays={
+    Object {
+      "2019-02-02": Array [
+        Object {
+          "name": "Küünlapäev ehk pudrupäev",
+          "type": "folk",
+        },
+      ],
+      "2019-02-09": Array [
+        Object {
+          "name": "Luuvalupäev",
+          "type": "folk",
+        },
+      ],
+      "2019-02-22": Array [
+        Object {
+          "name": "Talvine peetripäev",
+          "type": "folk",
+        },
+      ],
+      "2019-02-24": Array [
+        Object {
+          "name": "Iseseisvuspäev",
+          "type": "public",
+        },
+        Object {
+          "name": "Talvine madisepäev",
+          "type": "folk",
+        },
+      ],
+    }
+  }
+  startDate={2019-02-02T00:00:00.000Z}
+>
+  <div
+    id="table"
+  >
+    <Table
+      as="table"
+      celled={true}
+      columns={7}
+      unstackable={true}
+    >
+      <table
+        className="ui celled unstackable seven column table"
+      >
+        <TableHeader
+          as="thead"
+        >
+          <thead
+            className=""
+          >
+            <TableRow
+              as="tr"
+              cellAs="td"
+            >
+              <tr
+                className=""
+              >
+                <TableHeaderCell
+                  as="th"
+                  key="0"
+                  style={
+                    Object {
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  <TableCell
+                    as="th"
+                    className=""
+                    style={
+                      Object {
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <th
+                      className=""
+                      style={
+                        Object {
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      <p>
+                        mem
+                      </p>
+                      <strong>
+                        2.2.2019
+                      </strong>
+                    </th>
+                  </TableCell>
+                </TableHeaderCell>
+                <TableHeaderCell
+                  as="th"
+                  key="1"
+                  style={
+                    Object {
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  <TableCell
+                    as="th"
+                    className=""
+                    style={
+                      Object {
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <th
+                      className=""
+                      style={
+                        Object {
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      <p>
+                        kɔs
+                      </p>
+                      <strong>
+                        3.2.2019
+                      </strong>
+                    </th>
+                  </TableCell>
+                </TableHeaderCell>
+                <TableHeaderCell
+                  as="th"
+                  key="2"
+                  style={
+                    Object {
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  <TableCell
+                    as="th"
+                    className=""
+                    style={
+                      Object {
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <th
+                      className=""
+                      style={
+                        Object {
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      <p>
+                        dzo
+                      </p>
+                      <strong>
+                        4.2.2019
+                      </strong>
+                    </th>
+                  </TableCell>
+                </TableHeaderCell>
+                <TableHeaderCell
+                  as="th"
+                  key="3"
+                  style={
+                    Object {
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  <TableCell
+                    as="th"
+                    className=""
+                    style={
+                      Object {
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <th
+                      className=""
+                      style={
+                        Object {
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      <p>
+                        bla
+                      </p>
+                      <strong>
+                        5.2.2019
+                      </strong>
+                    </th>
+                  </TableCell>
+                </TableHeaderCell>
+                <TableHeaderCell
+                  as="th"
+                  key="4"
+                  style={
+                    Object {
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  <TableCell
+                    as="th"
+                    className=""
+                    style={
+                      Object {
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <th
+                      className=""
+                      style={
+                        Object {
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      <p>
+                        kuɖ
+                      </p>
+                      <strong>
+                        6.2.2019
+                      </strong>
+                    </th>
+                  </TableCell>
+                </TableHeaderCell>
+                <TableHeaderCell
+                  as="th"
+                  key="5"
+                  style={
+                    Object {
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  <TableCell
+                    as="th"
+                    className=""
+                    style={
+                      Object {
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <th
+                      className=""
+                      style={
+                        Object {
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      <p>
+                        yaw
+                      </p>
+                      <strong>
+                        7.2.2019
+                      </strong>
+                    </th>
+                  </TableCell>
+                </TableHeaderCell>
+                <TableHeaderCell
+                  as="th"
+                  key="6"
+                  style={
+                    Object {
+                      "textAlign": "center",
+                    }
+                  }
+                >
+                  <TableCell
+                    as="th"
+                    className=""
+                    style={
+                      Object {
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    <th
+                      className=""
+                      style={
+                        Object {
+                          "textAlign": "center",
+                        }
+                      }
+                    >
+                      <p>
+                        fiɖ
+                      </p>
+                      <strong>
+                        8.2.2019
+                      </strong>
+                    </th>
+                  </TableCell>
+                </TableHeaderCell>
+              </tr>
+            </TableRow>
+          </thead>
+        </TableHeader>
+        <TableBody
+          as="tbody"
+        >
+          <tbody
+            className=""
+          >
+            <TableRow
+              as="tr"
+              cellAs="td"
+            >
+              <tr
+                className=""
+              >
+                <TableCell
+                  as="td"
+                  key="0"
+                  style={
+                    Object {
+                      "height": 50,
+                    }
+                  }
+                >
+                  <td
+                    className=""
+                    style={
+                      Object {
+                        "height": 50,
+                      }
+                    }
+                  >
+                    <Message
+                      info={true}
+                      key="0"
+                      success={false}
+                    >
+                      <div
+                        className="ui info message"
+                      >
+                        <p>
+                          Küünlapäev ehk pudrupäev
+                        </p>
+                      </div>
+                    </Message>
+                  </td>
+                </TableCell>
+                <TableCell
+                  as="td"
+                  key="1"
+                  style={
+                    Object {
+                      "height": 50,
+                    }
+                  }
+                >
+                  <td
+                    className=""
+                    style={
+                      Object {
+                        "height": 50,
+                      }
+                    }
+                  />
+                </TableCell>
+                <TableCell
+                  as="td"
+                  key="2"
+                  style={
+                    Object {
+                      "height": 50,
+                    }
+                  }
+                >
+                  <td
+                    className=""
+                    style={
+                      Object {
+                        "height": 50,
+                      }
+                    }
+                  />
+                </TableCell>
+                <TableCell
+                  as="td"
+                  key="3"
+                  style={
+                    Object {
+                      "height": 50,
+                    }
+                  }
+                >
+                  <td
+                    className=""
+                    style={
+                      Object {
+                        "height": 50,
+                      }
+                    }
+                  />
+                </TableCell>
+                <TableCell
+                  as="td"
+                  key="4"
+                  style={
+                    Object {
+                      "height": 50,
+                    }
+                  }
+                >
+                  <td
+                    className=""
+                    style={
+                      Object {
+                        "height": 50,
+                      }
+                    }
+                  />
+                </TableCell>
+                <TableCell
+                  as="td"
+                  key="5"
+                  style={
+                    Object {
+                      "height": 50,
+                    }
+                  }
+                >
+                  <td
+                    className=""
+                    style={
+                      Object {
+                        "height": 50,
+                      }
+                    }
+                  />
+                </TableCell>
+                <TableCell
+                  as="td"
+                  key="6"
+                  style={
+                    Object {
+                      "height": 50,
+                    }
+                  }
+                >
+                  <td
+                    className=""
+                    style={
+                      Object {
+                        "height": 50,
+                      }
+                    }
+                  />
+                </TableCell>
+              </tr>
+            </TableRow>
+          </tbody>
+        </TableBody>
+      </table>
+    </Table>
+  </div>
+</WeekTable>
+`;
+
+exports[`should render <WeekTableDate/> and call useGetHolidays 1`] = `
+<WeekTable
+  holidays={
+    Object {
+      "data": Object {
+        "error": false,
+        "holidays": Object {
+          "2019-02-02": Array [
+            Object {
+              "name": "Küünlapäev ehk pudrupäev",
+              "type": "folk",
+            },
+          ],
+          "2019-02-09": Array [
+            Object {
+              "name": "Luuvalupäev",
+              "type": "folk",
+            },
+          ],
+          "2019-02-22": Array [
+            Object {
+              "name": "Talvine peetripäev",
+              "type": "folk",
+            },
+          ],
+          "2019-02-24": Array [
+            Object {
+              "name": "Iseseisvuspäev",
+              "type": "public",
+            },
+            Object {
+              "name": "Talvine madisepäev",
+              "type": "folk",
+            },
+          ],
+        },
+      },
+    }
+  }
+  startDate={2019-01-26T00:00:00.000Z}
+/>
+`;

@@ -4,7 +4,7 @@ import _ from "lodash";
 import {useGetHolidays} from "../api";
 
 export const getWeekDay = (date) => {
-    return new Intl.DateTimeFormat("ee-EE", {weekday: "long"}).format(date)
+    return new Intl.DateTimeFormat("en-US", {weekday: "long"}).format(date)
 };
 
 //Retrieves the dates in the current week
@@ -55,13 +55,9 @@ const createTableBody = (startDate, holidays) => {
     })
 };
 
-const WeekTable = ({startDate, endDate}) => {
-    const holidays = useGetHolidays(startDate, endDate);
+export const WeekTable = ({startDate, holidays}) => {
+
     const dateHeaders = createTableHeader(startDate);
-
-    if (!holidays) return <Loader>Loading...</Loader>;
-
-
     const dateBody = createTableBody(startDate, holidays);
     return (
         <div id={"table"}>
@@ -82,4 +78,12 @@ const WeekTable = ({startDate, endDate}) => {
     )
 };
 
-export default WeekTable;
+const WeekTableData = ({startDate, endDate}) => {
+    const holidays = useGetHolidays(startDate, endDate);
+
+    if (!holidays) return <Loader>Loading...</Loader>;
+
+    return <WeekTable startDate={startDate} holidays={holidays}/>
+};
+
+export default WeekTableData;

@@ -34,6 +34,7 @@ export const useGetHolidays = (startDate, endDate) => {
                 startDate: startDate.toISOString().substring(0, 10),
                 endDate: endDate.toISOString().substring(0, 10)
             }).then(r => {
+                //dispatch response data to redux store
                 dispatch({type: "GET_HOLIDAYS", payload: r.data.holidays});
                 setHolidays(r.data.holidays);
             }).catch(e => console.log(e))
