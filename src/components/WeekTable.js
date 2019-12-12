@@ -42,7 +42,7 @@ const createTableBody = (startDate, holidays) => {
     return dates.map((date, index) => {
         const holiday = _.get(holidays, date.toISOString().substring(0, 10));
         return (
-            <Table.Cell key={index} style={{height: 50}}>
+            <Table.Cell key={index} style={{height: 50}} verticalAlign={"top"}>
                 {holiday && holiday.map((day, index) => {
                     return (
                         <Message info={day.type === "folk"} key={index} success={day.type === "public"}>
