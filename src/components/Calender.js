@@ -1,11 +1,7 @@
-import React, {useEffect, useReducer, useState} from "react";
-import {DateRangeInput} from "@datepicker-react/styled";
-import {Button, Container, Grid, Icon, Segment} from "semantic-ui-react";
-import {Datepicker, START_DATE} from "@datepicker-react/styled";
+import React, {useState} from "react";
+import {Button, Grid, Icon, Segment} from "semantic-ui-react";
 import Dropdown from "semantic-ui-react/dist/commonjs/modules/Dropdown";
 import WeekTable, {getWeekDay} from "./WeekTable";
-import axios from "axios";
-import {useDispatch, useStore} from "react-redux";
 
 const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     .map((day, index) => ({
