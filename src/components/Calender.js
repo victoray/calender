@@ -71,7 +71,7 @@ const Calender = () => {
                     </Grid.Column>
                     <Grid.Column textAlign={"right"} width={6}>
 
-                        <Dropdown placeholder='First Day' search selection options={weekDays}
+                        <Dropdown placeholder='First Day' search selection options={weekDays} className={"dropdown"}
                                   defaultValue={firstDay}
                                   onChange={(e, {value}) => handleFirstDayChange(value)}/>
                     </Grid.Column>
