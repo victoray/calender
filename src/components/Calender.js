@@ -44,6 +44,7 @@ const Calender = () => {
     const startDate = new Date(date);
     startDate.setDate(startDate.getDate() - 7);
 
+    //This calculates the final day of the week
     const endDate = new Date(date);
     endDate.setDate(endDate.getDate() - 1);
 
@@ -81,7 +82,7 @@ const Calender = () => {
                 </Grid>
             </Segment>
 
-            <WeekTable endDate={date} startDate={startDate}/>
+            <WeekTable endDate={endDate} startDate={startDate}/>
 
             <Message info compact>
                 <p>{"folk"}</p>
