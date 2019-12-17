@@ -2,10 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0d35d33-717e-4863-9b37-899ca41f8c5a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Calender.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Calender.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ResponsiveButtons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WeekTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WeekTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/components/Calender.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/components/Calender.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/components/NavBar.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/components/NavBar.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/components/__snapshots__/NavBar.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/components/__snapshots__/NavBar.test.js.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/components/__snapshots__/WeekTable.test.js.snap" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/components/__snapshots__/WeekTable.test.js.snap" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +27,7 @@
       <list>
         <option value="TypeScript JSX File" />
         <option value="JavaScript File" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -23,11 +35,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1UqJ3TqANoUdQfRmkgn8jieNHZa" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/components" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="settings.saveactions" />
@@ -38,19 +53,7 @@
       <recent name="$PROJECT_DIR$/src/test/components" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Jest.should render &lt;WeekTable/&gt;">
+  <component name="RunManager" selected="Jest.should render the &lt;NavBar/&gt;">
     <configuration name="Calender.test.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -100,18 +103,40 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="Calender.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/components/Calender.js" working-dir="$PROJECT_DIR$/src/components">
+    <configuration name="should render the &lt;NavBar/&gt;" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/react-scripts" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/src/test/components/NavBar.test.js" />
+      <test-names>
+        <test-name value="should render the &lt;NavBar/&gt;" />
+      </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.should render the &lt;NavBar/&gt;" />
         <item itemvalue="Jest.should render &lt;WeekTable/&gt;" />
-        <item itemvalue="Jest.should render &lt;WeekTableData/&gt; and call useGetHolidays" />
         <item itemvalue="Jest.should render &lt;Calender/&gt;" />
+        <item itemvalue="Jest.should render &lt;WeekTableData/&gt; and call useGetHolidays" />
         <item itemvalue="Jest.Calender.test.js" />
-        <item itemvalue="Node.js.Calender.js" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -143,5 +168,31 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="578" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576594897704">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="578" y="280" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1576594897704" />
+    <state x="412" y="320" key="EditFileWatcherDialog" timestamp="1576594738377">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="412" y="320" key="EditFileWatcherDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1576594738377" />
+    <state width="1659" height="295" key="GridCell.Tab.0.bottom" timestamp="1576614854588">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="295" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1576614854588" />
+    <state width="1659" height="295" key="GridCell.Tab.0.center" timestamp="1576614854587">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="295" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1576614854587" />
+    <state width="1659" height="295" key="GridCell.Tab.0.left" timestamp="1576614854586">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="295" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1576614854586" />
+    <state width="1659" height="295" key="GridCell.Tab.0.right" timestamp="1576614854587">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1659" height="295" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1576614854587" />
   </component>
 </project>

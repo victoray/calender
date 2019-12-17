@@ -26,7 +26,7 @@ const createTableHeader = (startDate) => {
     return dates.map((date, index) => {
 
         return (
-            <Table.HeaderCell key={index} style={{textAlign: "center"}}>
+            <Table.HeaderCell key={index}>
                 <p>{getWeekDay(date).substring(0, 3)}</p>
                 <strong>{date.toLocaleDateString("et-EE")}</strong>
             </Table.HeaderCell>
@@ -42,7 +42,7 @@ const createTableBody = (startDate, holidays) => {
     return dates.map((date, index) => {
         const holiday = _.get(holidays, date.toISOString().substring(0, 10));
         return (
-            <Table.Cell key={index} style={{height: 50}} verticalAlign={"top"}>
+            <Table.Cell key={index} style={{height: 50}} verticalAlign={"top"} >
                 {holiday && holiday.map((day, index) => {
                     return (
                         <Message info={day.type === "folk"} key={index} success={day.type === "public"}>
@@ -60,8 +60,8 @@ export const WeekTable = ({startDate, holidays}) => {
     const dateHeaders = createTableHeader(startDate);
     const dateBody = createTableBody(startDate, holidays);
     return (
-        <div id={"table"}>
-            <Table celled columns={7} unstackable>
+        <div className={"scrollable"}>
+            <Table celled columns={7} unstackable striped selectable>
                 <Table.Header>
                     <Table.Row>
                         {dateHeaders}

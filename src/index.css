@@ -1,33 +1,104 @@
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.navbar {
-    border-radius: 0 !important;
+.nav {
+  border-radius: 0 !important;
+  width: 100%;
+  background: #2c3e50 !important;
+}
+.nav .header {
+  font-size: calc(14px + 0.5vw) !important;
+}
+.nav .link:hover {
+  cursor: pointer;
 }
 
-#table {
-    overflow-x: auto;
-    width: 100%;
+.success {
+  color: black !important;
+  background: lightskyblue !important;
 }
 
-.dropdown {
-    position: absolute !important;
-    right: 10px !important;
+.list {
+  margin-top: 20px !important;
 }
 
-@media only screen and (max-width: 512px) {
-    #week-range {
-        visibility: hidden !important;
-    }
+.info {
+  color: black !important;
+  background: ghostwhite !important;
 }
+
+.scrollable {
+  overflow-x: auto;
+  margin-top: 20px;
+  width: 100%;
+}
+.scrollable th {
+  font-size: calc(8px + 0.5vw) !important;
+  text-align: center !important;
+  background: #2c3e50 !important;
+  color: white !important;
+  border: 0.1px solid #2c3e35 !important;
+  border-radius: 0 !important;
+}
+.scrollable td {
+  text-align: center !important;
+  font-size: calc(8px + 0.5vw);
+}
+.scrollable td:hover {
+  background: whitesmoke;
+  cursor: pointer;
+}
+
+.fluid {
+  width: 80% !important;
+}
+
+.button {
+  background: #2c3e50 !important;
+  border-radius: 0 !important;
+}
+.button i {
+  color: white;
+}
+
+.button:hover {
+  background: #2c3e66 !important;
+}
+
+.date__label {
+  width: 160px !important;
+  background: lightgrey !important;
+  text-align: center;
+  vertical-align: center;
+  border-radius: 0 !important;
+  margin-left: -1px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .date__label {
+    font-size: calc(8px + 0.5vw) !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .container .date__label {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .scrollable th {
+    font-size: 16px !important;
+  }
+  .scrollable td {
+    font-size: 16px !important;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

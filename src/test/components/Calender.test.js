@@ -1,7 +1,6 @@
 import React from "react";
-import {mount, shallow, render} from "enzyme";
-import Calender, {getClosestDate} from "../../components/Calender";
-import {Container} from "semantic-ui-react";
+import {mount} from "enzyme";
+import Calender from "../../components/Calender";
 import {createStore} from "redux";
 import reducers from "../../reducers";
 import {Provider} from "react-redux";

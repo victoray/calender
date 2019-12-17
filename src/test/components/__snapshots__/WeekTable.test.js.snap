@@ -37,16 +37,18 @@ exports[`should render <WeekTable/> 1`] = `
   startDate={2019-02-02T00:00:00.000Z}
 >
   <div
-    id="table"
+    className="scrollable"
   >
     <Table
       as="table"
       celled={true}
       columns={7}
+      selectable={true}
+      striped={true}
       unstackable={true}
     >
       <table
-        className="ui celled unstackable seven column table"
+        className="ui celled selectable striped unstackable seven column table"
       >
         <TableHeader
           as="thead"

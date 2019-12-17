@@ -4,15 +4,17 @@ exports[`should render the <NavBar/> 1`] = `
 <NavBar>
   <Menu
     borderless={true}
-    className="navbar"
+    className="nav"
     inverted={true}
   >
     <div
-      className="ui borderless inverted navbar menu"
+      className="ui borderless inverted nav menu"
     >
-      <MenuItem>
+      <MenuItem
+        link={true}
+      >
         <div
-          className="item"
+          className="link item"
           onClick={[Function]}
         >
           <img
@@ -21,9 +23,11 @@ exports[`should render the <NavBar/> 1`] = `
           />
         </div>
       </MenuItem>
-      <MenuItem>
+      <MenuItem
+        link={true}
+      >
         <div
-          className="item"
+          className="link item"
           onClick={[Function]}
         >
           <Header

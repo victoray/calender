@@ -1,8 +1,6 @@
 import React, {useState} from "react";
-import {Grid, Message, Segment} from "semantic-ui-react";
-import Dropdown from "semantic-ui-react/dist/commonjs/modules/Dropdown";
+import {Button, Dropdown, Label, List, Message} from "semantic-ui-react";
 import WeekTable, {getWeekDay} from "./WeekTable";
-import ResponsiveButtons from "./ResponsiveButtons";
 
 
 const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
@@ -64,33 +62,37 @@ const Calender = () => {
     };
 
     return (
-        <div>
-            <Segment basic>
-                <Grid columns={3}>
-                    <Grid.Column width={6}>
-                        <ResponsiveButtons handleNextWeek={handleNextWeek} handlePreviousWeek={handlePreviousWeek}/>
-                    </Grid.Column>
-                    <Grid.Column textAlign={"center"} id={"week-range"} width={4}>
-                        <strong>{startDate.toLocaleDateString("et-EE")} - {endDate.toLocaleDateString("et-EE")}</strong>
-                    </Grid.Column>
-                    <Grid.Column textAlign={"right"} width={6}>
+        <div className={"ui container fluid"}>
+            <div>
+                <Button.Group size={"small"} floated={"right"} inverted>
+                    <Button className={"prev"} icon='angle double left'
+                            onClick={handlePreviousWeek}/>
+                            <Label active className={"date__label"}>{startDate.toLocaleDateString("et-EE")} - {endDate.toLocaleDateString("et-EE")}</Label>
+                    <Button className={"next"} icon='angle double right'
+                            onClick={handleNextWeek}/>
+                </Button.Group>
+                <Dropdown placeholder='First Day' selection search options={weekDays}
+                          defaultValue={firstDay}
+                          onChange={(e, {value}) => handleFirstDayChange(value)}/>
 
-                        <Dropdown placeholder='First Day' search selection options={weekDays} className={"dropdown"}
-                                  defaultValue={firstDay}
-                                  onChange={(e, {value}) => handleFirstDayChange(value)}/>
-                    </Grid.Column>
-                </Grid>
-            </Segment>
+            </div>
 
             <WeekTable endDate={endDate} startDate={startDate}/>
 
-            <Message info compact>
-                <p>{"folk"}</p>
-            </Message>
-
-            <Message success compact>
-                <p>{"public"}</p>
-            </Message>
+            <div>
+                <List>
+                    <List.Item>
+                        <Label as={Message} info className={"holiday__label"}>
+                            folk
+                        </Label>
+                    </List.Item>
+                    <List.Item>
+                        <Label as={Message} success className={"holiday__label"}>
+                            public
+                        </Label>
+                    </List.Item>
+                </List>
+            </div>
         </div>
     )
 
